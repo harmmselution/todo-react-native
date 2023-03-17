@@ -1,21 +1,12 @@
-import {
-  View,
-  Text,
-  Image,
-  TextInput,
-  ScrollView,
-  FlatList,
-  SafeAreaView,
-  SectionList,
-} from 'react-native';
-import { FC, useState, useEffect } from 'react';
+import { View } from 'react-native';
+import { FC } from 'react';
+import Todos from './todos/Todos';
 const Home: FC = () => {
-  const [item, setItem] = useState('');
-  const updateText = (text: string) => {
-    setItem(text);
-  };
-
-  return <View></View>;
+  return (
+    <View>
+      <Todos />
+    </View>
+  );
 };
 
 export default Home;

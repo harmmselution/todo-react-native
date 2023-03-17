@@ -3,6 +3,7 @@ import Checkbox from 'expo-checkbox';
 import { FC, useState } from 'react';
 import { ITodo } from '../../../../../interfaces/todo.interface';
 import TodoItem from './todo/TodoItem';
+import AddTodo from './AddTodo';
 
 const Todos: FC = () => {
   const [todos, setTodos] = useState<ITodo[]>([]);
@@ -21,6 +22,7 @@ const Todos: FC = () => {
   return (
     <View>
       <Text> Todos </Text>
+      <AddTodo setTodos={setTodos} />
       {todos.map((todo) => (
         <TodoItem item={todo} key={todo._id} toggleTodo={toggleTodo} />
       ))}
